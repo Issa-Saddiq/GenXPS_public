@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+genXPS.egg-info/PKG-INFO
+genXPS.egg-info/SOURCES.txt
+genXPS.egg-info/dependency_links.txt
+genXPS.egg-info/requires.txt
+genXPS.egg-info/top_level.txt
+genxps/__init__.py
+genxps/foo.py
+tests/test_foo.py

@@ -1,0 +1,123 @@
+[project]
+name = "genXPS"
+version = "0.0.1"
+description = "This is a template repository for Python projects that use uv for their dependency management."
+authors = [{ name = "Issa Saddiq", email = "saddiqi157@gmail.com" }]
+readme = "README.md"
+keywords = ['python']
+requires-python = ">=3.13,<4.0"
+dependencies = [
+    "corner>=2.2.3",
+    "emcee>=3.1.6",
+    "fastcore>=1.8.1",
+    "functions>=0.7.0",
+    "geomloss>=0.2.6",
+    "helper>=2.5.0",
+    "ipykernel>=6.29.5",
+    "matplotlib>=3.8.4",
+    "mhar>=1.0.4",
+    "numpy>=1.26.4",
+    "openpyxl>=3.1.5",
+    "orca>=1.8",
+    "pandas>=2.2.3",
+    "pip>=25.0.1",
+    "plotly>=6.0.0",
+    "python-ternary>=1.0.8",
+    "rdkit>=2024.9.5",
+    "scikit-dimension>=0.3.4",
+    "scikit-learn>=1.5.2",
+    "seaborn>=0.13.2",
+    "tabulate>=0.9.0",
+    "torch>=2.4.1",
+    "tqdm>=4.67.1",
+    "wsl>=0.12",
+]
+
+[project.urls]
+Homepage = "https://saddiqi157.github.io/genXPS/"
+Repository = "https://github.com/saddiqi157/genXPS"
+Documentation = "https://saddiqi157.github.io/genXPS/"
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=7.2.0",
+    "pre-commit>=2.20.0",
+    
+    "mypy>=0.991",
+    
+    "ruff>=0.0.235",
+    
+]
+
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["genxps"]
+
+[tool.mypy]
+files = ["genxps"]
+disallow_untyped_defs = "True"
+disallow_any_unimported = "True"
+no_implicit_optional = "True"
+check_untyped_defs = "True"
+warn_return_any = "True"
+warn_unused_ignores = "True"
+show_error_codes = "True"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py39"
+line-length = 120
+fix = true
+
+[tool.ruff.lint]
+select = [
+    # flake8-2020
+    "YTT",
+    # flake8-bandit
+    "S",
+    # flake8-bugbear
+    "B",
+    # flake8-builtins
+    "A",
+    # flake8-comprehensions
+    "C4",
+    # flake8-debugger
+    "T10",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+    # mccabe
+    "C90",
+    # pycodestyle
+    "E", "W",
+    # pyflakes
+    "F",
+    # pygrep-hooks
+    "PGH",
+    # pyupgrade
+    "UP",
+    # ruff
+    "RUF",
+    # tryceratops
+    "TRY",
+]
+ignore = [
+    # LineTooLong
+    "E501",
+    # DoNotAssignLambda
+    "E731",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101"]
+
+[tool.ruff.format]
+preview = true
+
+

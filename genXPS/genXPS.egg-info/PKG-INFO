@@ -1,0 +1,107 @@
+Metadata-Version: 2.4
+Name: genXPS
+Version: 0.0.1
+Summary: This is a template repository for Python projects that use uv for their dependency management.
+Author-email: Issa Saddiq <saddiqi157@gmail.com>
+Project-URL: Homepage, https://saddiqi157.github.io/genXPS/
+Project-URL: Repository, https://github.com/saddiqi157/genXPS
+Project-URL: Documentation, https://saddiqi157.github.io/genXPS/
+Keywords: python
+Requires-Python: <4.0,>=3.13
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: corner>=2.2.3
+Requires-Dist: emcee>=3.1.6
+Requires-Dist: fastcore>=1.8.1
+Requires-Dist: functions>=0.7.0
+Requires-Dist: geomloss>=0.2.6
+Requires-Dist: helper>=2.5.0
+Requires-Dist: ipykernel>=6.29.5
+Requires-Dist: matplotlib>=3.8.4
+Requires-Dist: mhar>=1.0.4
+Requires-Dist: numpy>=1.26.4
+Requires-Dist: openpyxl>=3.1.5
+Requires-Dist: orca>=1.8
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: pip>=25.0.1
+Requires-Dist: plotly>=6.0.0
+Requires-Dist: python-ternary>=1.0.8
+Requires-Dist: rdkit>=2024.9.5
+Requires-Dist: scikit-dimension>=0.3.4
+Requires-Dist: scikit-learn>=1.5.2
+Requires-Dist: seaborn>=0.13.2
+Requires-Dist: tabulate>=0.9.0
+Requires-Dist: torch>=2.4.1
+Requires-Dist: tqdm>=4.67.1
+Requires-Dist: wsl>=0.12
+Dynamic: license-file
+
+# genXPS
+
+[![Release](https://img.shields.io/github/v/release/saddiqi157/genXPS)](https://img.shields.io/github/v/release/saddiqi157/genXPS)
+[![Build status](https://img.shields.io/github/actions/workflow/status/saddiqi157/genXPS/main.yml?branch=main)](https://github.com/saddiqi157/genXPS/actions/workflows/main.yml?query=branch%3Amain)
+[![codecov](https://codecov.io/gh/saddiqi157/genXPS/branch/main/graph/badge.svg)](https://codecov.io/gh/saddiqi157/genXPS)
+[![Commit activity](https://img.shields.io/github/commit-activity/m/saddiqi157/genXPS)](https://img.shields.io/github/commit-activity/m/saddiqi157/genXPS)
+[![License](https://img.shields.io/github/license/saddiqi157/genXPS)](https://img.shields.io/github/license/saddiqi157/genXPS)
+
+This is a template repository for Python projects that use uv for their dependency management.
+
+- **Github repository**: <https://github.com/saddiqi157/genXPS/>
+- **Documentation** <https://saddiqi157.github.io/genXPS/>
+
+## Getting started with your project
+
+### 1. Create a New Repository
+
+First, create a repository on GitHub with the same name as this project, and then run the following commands:
+
+```bash
+git init -b main
+git add .
+git commit -m "init commit"
+git remote add origin git@github.com:saddiqi157/genXPS.git
+git push -u origin main
+```
+
+### 2. Set Up Your Development Environment
+
+Then, install the environment and the pre-commit hooks with
+
+```bash
+make install
+```
+
+This will also generate your `uv.lock` file
+
+### 3. Run the pre-commit hooks
+
+Initially, the CI/CD pipeline might be failing due to formatting issues. To resolve those run:
+
+```bash
+uv run pre-commit run -a
+```
+
+### 4. Commit the changes
+
+Lastly, commit the changes made by the two steps above to your repository.
+
+```bash
+git add .
+git commit -m 'Fix formatting issues'
+git push origin main
+```
+
+You are now ready to start development on your project!
+The CI/CD pipeline will be triggered when you open a pull request, merge to main, or when you create a new release.
+
+To finalize the set-up for publishing to PyPI, see [here](https://fpgmaas.github.io/cookiecutter-uv/features/publishing/#set-up-for-pypi).
+For activating the automatic documentation with MkDocs, see [here](https://fpgmaas.github.io/cookiecutter-uv/features/mkdocs/#enabling-the-documentation-on-github).
+To enable the code coverage reports, see [here](https://fpgmaas.github.io/cookiecutter-uv/features/codecov/).
+
+## Releasing a new version
+
+
+
+---
+
+Repository initiated with [fpgmaas/cookiecutter-uv](https://github.com/fpgmaas/cookiecutter-uv).

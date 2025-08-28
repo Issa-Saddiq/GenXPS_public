@@ -99,3 +99,32 @@ def normalize_spectra_by_area(spectrum):
 
     # Normalize the spectrum
     return spectrum / area
+
+
+
+def correct_spectrum(spectrum, amount):
+    """
+    Applies a fixed horizontal shift to the spectrum, padding with zeros.
+
+    Args:
+        spectrum (np.ndarray): The input spectrum array.
+        amount (int): The number of indices to shift. A positive value
+                      shifts to the right, a negative value shifts to the left.
+
+    Returns:
+        np.ndarray: The shifted spectrum.
+    """
+    # Create an array of zeros with the same shape as the original
+    shifted_spectrum = np.zeros_like(spectrum)
+
+    if amount > 0:
+        # Shift to the right, leaving zeros at the beginning
+        shifted_spectrum[amount:] = spectrum[:-amount]
+    elif amount < 0:
+        # Shift to the left, leaving zeros at the end
+        shifted_spectrum[:amount] = spectrum[-amount:]
+    else:
+        # No shift, return a copy of the original
+        shifted_spectrum = spectrum.copy()
+
+    return shifted_spectrum

@@ -146,6 +146,7 @@ def plot_annotated_regions(original_spectrum, shifted_spectrum, aligned_spectrum
                 )
         if i > 0:
             ax.tick_params(left=False, labelleft=False)
+        plt.grid(True, linestyle='--', alpha=0.6)
 
     # E. Final plot styling
     max_height_in_regions = aligned_spectrum[np.any([(be_values >= r[0]) & (be_values <= r[1]) for r in merged_regions], axis=0)].max()

@@ -149,6 +149,7 @@ def label_converter(label):
             fg_counts.append(fg_count)
 
     return fg_counts
+
 def create_uniform_energy_grid(start_energy, end_energy, increment=0.1):
     """
     Create a uniform energy grid with a fixed increment.

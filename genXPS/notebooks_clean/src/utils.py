@@ -417,7 +417,7 @@ def train_model(
         dict: A dictionary containing training history and the best model state.
     """
     torch.manual_seed(seed)
-    early_stopping = EarlyStopping(patience=50, min_delta=0.0001)
+    early_stopping = EarlyStopping(patience=15, min_delta=0.0001)
     
     history = {
         'train_loss': [], 'test_loss': [],
@@ -484,7 +484,7 @@ def train_model(
             best_epoch = epoch
         
         # Early stopping check
-        if epoch >= 40:
+        if epoch >= 20:
             early_stopping(epoch_test_loss)
             if early_stopping.early_stop:
                 print(f"Early stopping at epoch {epoch}")
